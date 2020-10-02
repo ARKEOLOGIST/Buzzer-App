@@ -17,7 +17,7 @@ export default class App extends React.Component {
     this.setState({ playbackObject: await new Audio.Sound() });
     try
     {
-      this.state.playbackObject.loadAsync(buzz);
+      await this.state.playbackObject.loadAsync(buzz);
     } catch (e) {
       ToastAndroid.show("Error occurred! " + e,ToastAndroid.SHORT);
     }
